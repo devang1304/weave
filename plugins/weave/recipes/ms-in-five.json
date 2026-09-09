@@ -1,0 +1,12 @@
+{
+  "recipe": "ms-in-five", "kind": "deck", "base": "NW_Presentation_Base_2026.pptx",
+  "title_pattern": "{offering} in five slides",
+  "inputs": [{"key": "offering", "required": true, "ask": "Which Microsoft offering or product should this distill (e.g. \"Microsoft Purview\", \"Copilot for Microsoft 365\")?"}],
+  "sections": [
+    {"id": "what-it-is", "heading": null, "level": null, "required": true},
+    {"id": "why-it-matters", "heading": null, "level": null, "required": true},
+    {"id": "how-it-works", "heading": null, "level": null, "required": true},
+    {"id": "next-steps", "heading": null, "level": null, "required": true}
+  ],
+  "validator": {}
+}

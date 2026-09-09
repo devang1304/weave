@@ -1,0 +1,46 @@
+{
+  "name": "weave",
+  "displayName": "Netwoven Weave",
+  "version": "2.0.1",
+  "description": "Netwoven Weave turns notes, transcripts, estimates, and drafts into client-ready Word documents, PowerPoint decks, and statements of work on the Netwoven 2026 templates, then reviews any deliverable against Netwoven's quality standard. Answer-first structure, exact numbers, house writing rules, brand palette, and validators that block template leakage.",
+  "author": {
+    "name": "Netwoven"
+  },
+  "homepage": "https://www.netwoven.com/",
+  "license": "Proprietary",
+  "keywords": ["netwoven", "deliverables", "word", "powerpoint", "sow", "proposal", "consulting", "microsoft"],
+  "hooks": "./hooks/hooks.json",
+  "userConfig": {
+    "author_name": {
+      "type": "string",
+      "title": "Your name",
+      "description": "Shown on the revision history page of documents you build."
+    },
+    "author_role": {
+      "type": "string",
+      "title": "Your role",
+      "description": "Shown next to your name on the revision history page, for example Senior Consultant."
+    },
+    "telemetry_enabled": {
+      "type": "boolean",
+      "title": "Share anonymised usage events",
+      "description": "Sends deliverable type, template version, pass or fail, and duration to Netwoven's usage list. Never prompt text, file names, or client names. Turn off any time.",
+      "default": true
+    },
+    "telemetry_endpoint": {
+      "type": "string",
+      "title": "Usage list endpoint",
+      "description": "Set by the plugin team. Leave blank to keep events on this device only."
+    },
+    "telemetry_tenant_id": {
+      "type": "string",
+      "title": "Usage list tenant ID",
+      "description": "Set by the plugin team. The Microsoft Entra tenant that owns the usage list's site."
+    },
+    "telemetry_client_id": {
+      "type": "string",
+      "title": "Usage list client ID",
+      "description": "Set by the plugin team. Application (client) ID of the usage-list sign-in app."
+    }
+  }
+}

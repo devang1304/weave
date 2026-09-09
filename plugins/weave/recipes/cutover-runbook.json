@@ -1,0 +1,20 @@
+{
+  "recipe": "cutover-runbook",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} cutover runbook: {system_name}",
+  "inputs": [
+    {"key": "system_name", "required": true, "ask": "What is cutting over, and to what target?"}
+  ],
+  "sections": [
+    {"id": "pre-checklist", "heading": "Pre-Cutover Checklist", "level": 1, "required": true},
+    {"id": "sequence", "heading": "Cutover Sequence", "level": 1, "required": true},
+    {"id": "rollback", "heading": "Rollback and Abort Criteria", "level": 1, "required": true},
+    {"id": "validation", "heading": "Post-Cutover Validation", "level": 1, "required": true},
+    {"id": "communication", "heading": "Communication Plan", "level": 1, "required": false}
+  ],
+  "validator": {
+    "require_headings": ["Cutover Sequence", "Rollback and Abort Criteria", "Post-Cutover Validation"],
+    "owners_and_dates_in": "sequence"
+  }
+}
