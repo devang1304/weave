@@ -1,0 +1,19 @@
+{
+  "recipe": "assessment-readout",
+  "kind": "deck",
+  "base": "NW_Presentation_Base_2026.pptx",
+  "title_pattern": "{client} assessment readout: {scope}",
+  "inputs": [
+    {"key": "scope", "required": true, "ask": "What is being assessed?"}
+  ],
+  "sections": [
+    {"id": "summary", "heading": null, "level": null, "required": true},
+    {"id": "findings", "heading": null, "level": null, "required": true, "framework": "finding-table"},
+    {"id": "next-steps", "heading": null, "level": null, "required": true}
+  ],
+  "frameworks": {
+    "finding-table": {"type": "table", "header": ["Area", "Current State", "Target State", "Priority"]}
+  },
+  "validator": {},
+  "companion": {"recipe": "assessment-report", "share": ["client", "date", "scope"]}
+}

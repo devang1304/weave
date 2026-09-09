@@ -1,0 +1,19 @@
+# Weave runtime dependencies (Netwoven Weave v2).
+#
+# These are the third-party packages the builder, reader, and validator
+# scripts import. `doctor.py` (stdlib only) reads this file when run with
+# `--install`: it creates a venv under ${CLAUDE_PLUGIN_DATA}/venv (default
+# ~/.weave/venv), runs `pip install -r requirements.txt` inside it, and records
+# the venv interpreter plus this file's SHA-256 in ${CLAUDE_PLUGIN_DATA}/env.json
+# so `weave.py` can re-execute itself with the right interpreter. If the current
+# interpreter already satisfies the required set, doctor skips the venv and
+# points env.json at that interpreter instead.
+#
+# Versions are pinned to what the plugin was built and tested against.
+# Required (weave.py refuses to run builders without these):
+python-docx==1.2.0
+python-pptx==1.0.2
+lxml==6.0.2
+# Optional (read_source.py needs them only for .xlsx and .pdf inputs):
+openpyxl==3.1.5
+pypdf==6.10.0

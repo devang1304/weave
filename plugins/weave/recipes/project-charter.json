@@ -1,0 +1,19 @@
+{
+  "recipe": "project-charter",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} project charter: {project_name}",
+  "inputs": [
+    {"key": "project_name", "required": true, "ask": "What is this project called?"}
+  ],
+  "sections": [
+    {"id": "purpose", "heading": "Purpose and Objectives", "level": 1, "required": true},
+    {"id": "scope", "heading": "Scope", "level": 1, "required": true},
+    {"id": "stakeholders", "heading": "Stakeholders and Roles", "level": 1, "required": true},
+    {"id": "timeline", "heading": "Timeline and Milestones", "level": 1, "required": true},
+    {"id": "success-criteria", "heading": "Success Criteria", "level": 1, "required": true},
+    {"id": "risks", "heading": "Assumptions and Risks", "level": 1, "required": false}
+  ],
+  "validator": {"require_headings": ["Purpose and Objectives", "Scope", "Success Criteria"]},
+  "companion": {"recipe": "kickoff-deck", "share": ["client", "date", "project_name"]}
+}

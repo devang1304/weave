@@ -1,0 +1,16 @@
+{
+  "recipe": "adoption-training",
+  "kind": "deck",
+  "base": "NW_Presentation_Base_2026.pptx",
+  "title_pattern": "{client} training: {initiative}",
+  "inputs": [
+    {"key": "initiative", "required": true, "ask": "What is this training session about?"}
+  ],
+  "sections": [
+    {"id": "objectives", "heading": null, "level": null, "required": true},
+    {"id": "agenda", "heading": null, "level": null, "required": true},
+    {"id": "key-topics", "heading": null, "level": null, "required": true},
+    {"id": "resources", "heading": null, "level": null, "required": false}
+  ],
+  "validator": {}
+}

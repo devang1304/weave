@@ -1,0 +1,18 @@
+{
+  "recipe": "adr",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "ADR: {decision_title}",
+  "inputs": [
+    {"key": "decision_title", "required": true, "ask": "What decision is this ADR about, in a few words (e.g. \"Choice of identity provider\")?"}
+  ],
+  "sections": [
+    {"id": "context", "heading": "Context", "level": 1, "required": true},
+    {"id": "decision", "heading": "Decision", "level": 1, "required": true},
+    {"id": "alternatives", "heading": "Alternatives Considered", "level": 1, "required": false},
+    {"id": "consequences", "heading": "Consequences", "level": 1, "required": true}
+  ],
+  "validator": {
+    "require_headings": ["Context", "Decision", "Consequences"]
+  }
+}

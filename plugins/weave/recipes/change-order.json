@@ -1,0 +1,19 @@
+{
+  "recipe": "change-order",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} change order: {original_sow}",
+  "inputs": [
+    {"key": "original_sow", "required": true, "ask": "What is the title of the original signed SOW this change order amends?"}
+  ],
+  "sections": [
+    {"id": "summary", "heading": "Summary of Change", "level": 1, "required": true},
+    {"id": "scope-change", "heading": "Scope Impact", "level": 1, "required": true},
+    {"id": "schedule-change", "heading": "Schedule Impact", "level": 1, "required": false},
+    {"id": "cost-change", "heading": "Cost Impact", "level": 1, "required": true},
+    {"id": "approval", "heading": "Approval", "level": 1, "required": true}
+  ],
+  "validator": {
+    "require_headings": ["Summary of Change", "Cost Impact", "Approval"]
+  }
+}

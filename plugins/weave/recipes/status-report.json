@@ -1,0 +1,26 @@
+{
+  "recipe": "status-report",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} status report: {period}",
+  "inputs": [
+    {"key": "period", "required": true, "ask": "Which reporting period is this for (e.g. \"week of 15 September\", \"August 2026\")?"}
+  ],
+  "sections": [
+    {"id": "summary", "heading": "Executive summary", "level": 1, "required": true},
+    {"id": "progress", "heading": "Progress this period", "level": 1, "required": true, "framework": "rag-table"},
+    {"id": "risks", "heading": "Risks and issues", "level": 1, "required": false, "framework": "raid-table"},
+    {"id": "next", "heading": "Next period and decisions needed", "level": 1, "required": true}
+  ],
+  "frameworks": {
+    "rag-table": {"type": "table", "style": "Netwoven Table 2",
+                  "header": ["Workstream", "Status", "This period", "Next period"]},
+    "raid-table": {"type": "table", "style": "Netwoven Table 2",
+                   "header": ["Item", "Type", "Owner", "Due"]}
+  },
+  "validator": {
+    "require_headings": ["Executive summary", "Next period and decisions needed"],
+    "owners_and_dates_in": "next"
+  },
+  "companion": {"recipe": "steerco", "share": ["client", "date", "period"]}
+}

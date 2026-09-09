@@ -1,0 +1,24 @@
+{
+  "recipe": "proposal",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} proposal: {offering}",
+  "inputs": [
+    {"key": "offering", "required": true, "ask": "What Microsoft offering or solution is this proposal for (e.g. \"SharePoint migration\", \"Copilot rollout\")?"}
+  ],
+  "sections": [
+    {"id": "summary", "heading": "Executive Summary", "level": 1, "required": true},
+    {"id": "understanding", "heading": "Understanding Your Needs", "level": 1, "required": true},
+    {"id": "approach", "heading": "Proposed Approach", "level": 1, "required": true},
+    {"id": "why-netwoven", "heading": "Why Netwoven", "level": 1, "required": false},
+    {"id": "investment", "heading": "Investment Summary", "level": 1, "required": true, "framework": "investment-table"},
+    {"id": "next-steps", "heading": "Next Steps", "level": 1, "required": true}
+  ],
+  "frameworks": {
+    "investment-table": {"type": "table", "style": "Netwoven Table 1",
+                          "header": ["Item", "Description", "Investment"]}
+  },
+  "validator": {
+    "require_headings": ["Executive Summary", "Proposed Approach", "Next Steps"]
+  }
+}

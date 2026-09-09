@@ -1,0 +1,17 @@
+{
+  "recipe": "kickoff-deck",
+  "kind": "deck",
+  "base": "NW_Presentation_Base_2026.pptx",
+  "title_pattern": "{client} kickoff: {project_name}",
+  "inputs": [
+    {"key": "project_name", "required": true, "ask": "What is this project called?"}
+  ],
+  "sections": [
+    {"id": "objectives", "heading": null, "level": null, "required": true},
+    {"id": "team", "heading": null, "level": null, "required": true},
+    {"id": "timeline", "heading": null, "level": null, "required": true},
+    {"id": "next-steps", "heading": null, "level": null, "required": true}
+  ],
+  "validator": {},
+  "companion": {"recipe": "project-charter", "share": ["client", "date", "project_name"]}
+}

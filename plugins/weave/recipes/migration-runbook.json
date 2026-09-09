@@ -1,0 +1,20 @@
+{
+  "recipe": "migration-runbook",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} migration runbook: {system_name}",
+  "inputs": [
+    {"key": "system_name", "required": true, "ask": "What is being migrated (system, workload, or tenant)?"}
+  ],
+  "sections": [
+    {"id": "overview", "heading": "Overview and Scope", "level": 1, "required": true},
+    {"id": "pre-checklist", "heading": "Pre-Migration Checklist", "level": 1, "required": true},
+    {"id": "steps", "heading": "Migration Steps", "level": 1, "required": true},
+    {"id": "rollback", "heading": "Rollback Plan", "level": 1, "required": true},
+    {"id": "validation", "heading": "Validation Steps", "level": 1, "required": true}
+  ],
+  "validator": {
+    "require_headings": ["Migration Steps", "Rollback Plan", "Validation Steps"],
+    "owners_and_dates_in": "steps"
+  }
+}

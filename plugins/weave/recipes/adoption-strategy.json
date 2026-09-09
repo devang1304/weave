@@ -1,0 +1,19 @@
+{
+  "recipe": "adoption-strategy",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} adoption strategy: {initiative}",
+  "inputs": [
+    {"key": "initiative", "required": true, "ask": "What is being adopted (e.g. \"Microsoft Copilot\", \"Teams Phone\")?"}
+  ],
+  "sections": [
+    {"id": "current-state", "heading": "Current State", "level": 1, "required": true},
+    {"id": "goals", "heading": "Adoption Goals", "level": 1, "required": true},
+    {"id": "approach", "heading": "Approach", "level": 1, "required": true},
+    {"id": "success-metrics", "heading": "Success Metrics", "level": 1, "required": true},
+    {"id": "timeline", "heading": "Timeline", "level": 1, "required": false}
+  ],
+  "validator": {
+    "require_headings": ["Adoption Goals", "Approach", "Success Metrics"]
+  }
+}

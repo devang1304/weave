@@ -1,0 +1,21 @@
+{
+  "recipe": "steerco",
+  "kind": "deck",
+  "base": "NW_Presentation_Base_2026.pptx",
+  "title_pattern": "{client} steering committee: {period}",
+  "inputs": [
+    {"key": "period", "required": true, "ask": "Which reporting period is this for (e.g. \"week of 15 September\", \"August 2026\")?"}
+  ],
+  "sections": [
+    {"id": "summary", "heading": null, "level": null, "required": true},
+    {"id": "next", "heading": null, "level": null, "required": true}
+  ],
+  "frameworks": {
+    "rag-table": {"type": "table",
+                  "header": ["Workstream", "Status", "This period", "Next period"]}
+  },
+  "validator": {
+    "owners_and_dates_in": "next"
+  },
+  "companion": {"recipe": "status-report", "share": ["client", "date", "period"]}
+}

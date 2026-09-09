@@ -1,0 +1,22 @@
+{
+  "recipe": "adoption-comms",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} adoption communications plan: {initiative}",
+  "inputs": [
+    {"key": "initiative", "required": true, "ask": "What is being communicated about?"}
+  ],
+  "sections": [
+    {"id": "audience", "heading": "Audience", "level": 1, "required": true},
+    {"id": "key-messages", "heading": "Key Messages", "level": 1, "required": true},
+    {"id": "channels", "heading": "Channels and Cadence", "level": 1, "required": true, "framework": "comms-table"},
+    {"id": "timeline", "heading": "Timeline", "level": 1, "required": false}
+  ],
+  "frameworks": {
+    "comms-table": {"type": "table", "style": "Netwoven Table 1",
+                    "header": ["Audience", "Message", "Channel", "Date"]}
+  },
+  "validator": {
+    "require_headings": ["Audience", "Key Messages", "Channels and Cadence"]
+  }
+}

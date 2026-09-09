@@ -1,0 +1,19 @@
+{
+  "recipe": "hld",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} high-level design: {system_name}",
+  "inputs": [
+    {"key": "system_name", "required": true, "ask": "What is the system or solution this design covers?"}
+  ],
+  "sections": [
+    {"id": "overview", "heading": "Overview", "level": 1, "required": true},
+    {"id": "requirements", "heading": "Requirements", "level": 1, "required": true},
+    {"id": "architecture", "heading": "Architecture", "level": 1, "required": true},
+    {"id": "components", "heading": "Components", "level": 1, "required": true},
+    {"id": "risks", "heading": "Risks and Open Questions", "level": 1, "required": false}
+  ],
+  "validator": {
+    "require_headings": ["Overview", "Architecture", "Components"]
+  }
+}

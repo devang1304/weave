@@ -1,0 +1,23 @@
+{
+  "recipe": "assessment-report",
+  "kind": "doc",
+  "base": "NW_Document_Base_2026.docx",
+  "title_pattern": "{client} assessment: {scope}",
+  "inputs": [
+    {"key": "scope", "required": true, "ask": "What is being assessed (e.g. \"Microsoft 365 governance\", \"Azure landing zone readiness\")?"}
+  ],
+  "sections": [
+    {"id": "summary", "heading": "Executive Summary", "level": 1, "required": true},
+    {"id": "findings", "heading": "Current State Findings", "level": 1, "required": true, "framework": "finding-table"},
+    {"id": "recommendations", "heading": "Recommendations", "level": 1, "required": true},
+    {"id": "next-steps", "heading": "Roadmap and Next Steps", "level": 1, "required": true}
+  ],
+  "frameworks": {
+    "finding-table": {"type": "table", "style": "Netwoven Table 2",
+                      "header": ["Area", "Current State", "Target State", "Priority"]}
+  },
+  "validator": {
+    "require_headings": ["Executive Summary", "Recommendations", "Roadmap and Next Steps"]
+  },
+  "companion": {"recipe": "assessment-readout", "share": ["client", "date", "scope"]}
+}
