@@ -9,7 +9,7 @@
       "name": "weave",
       "displayName": "Netwoven Weave",
       "description": "Client-ready Word documents, PowerPoint decks, and statements of work on the Netwoven 2026 templates, plus a review of any deliverable against Netwoven's quality standard.",
-      "version": "2.0.1",
+      "version": "2.0.3",
       "source": "./plugins/weave",
       "category": "productivity",
       "tags": ["netwoven", "deliverables", "word", "powerpoint", "sow"]

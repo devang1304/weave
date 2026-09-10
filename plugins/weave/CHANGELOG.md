@@ -4,7 +4,29 @@ All notable changes to Netwoven Weave. Format follows Keep a Changelog;
 versions follow semantic versioning. The plugin `version` pins what users
 receive, so every user-visible change bumps it.
 
-## [2.0.1] - Unreleased
+## [2.0.3] - Unreleased
+
+### Fixed
+- The plugin failed to load in Claude Code ("Duplicate hooks file detected"):
+  `plugin.json` declared `"hooks": "./hooks/hooks.json"`, but Claude Code
+  loads `hooks/hooks.json` on its own and the manifest field is for
+  additional hook files only. The declaration is gone, and a test now refuses
+  a manifest entry that resolves to the default file.
+
+## [2.0.2] - 2026-09-09
+
+### Fixed
+- The release pipeline's Publish step embedded `GITHUB_TOKEN` in the clone
+  URL, so a value with a stray space or newline failed as an opaque
+  "Malformed input to a URL function". The step now refuses an empty or
+  whitespace-bearing token with a message that says so, and git
+  authenticates through `gh auth setup-git`, so the token never appears in a
+  URL or in `.git/config`.
+- The `weave-m365-app` artifact was published even when `atk package` had
+  failed (the import step had already created the folder); it is published
+  only when `appPackage.zip` exists.
+
+## [2.0.1] - 2026-09-09
 
 ### Fixed
 - The release pipeline published the Claude marketplace artifacts only after
