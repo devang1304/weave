@@ -1,7 +1,7 @@
 {
   "name": "weave",
   "displayName": "Netwoven Weave",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Netwoven Weave turns notes, transcripts, estimates, and drafts into client-ready Word documents, PowerPoint decks, and statements of work on the Netwoven 2026 templates, then reviews any deliverable against Netwoven's quality standard. Answer-first structure, exact numbers, house writing rules, brand palette, and validators that block template leakage.",
   "author": {
     "name": "Netwoven"
@@ -9,7 +9,6 @@
   "homepage": "https://www.netwoven.com/",
   "license": "Proprietary",
   "keywords": ["netwoven", "deliverables", "word", "powerpoint", "sow", "proposal", "consulting", "microsoft"],
-  "hooks": "./hooks/hooks.json",
   "userConfig": {
     "author_name": {
       "type": "string",
